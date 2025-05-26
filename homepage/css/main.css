@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.background-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../imgs/city-background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 120px; /* 헤더 높이만큼 여백 추가 */
+}
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slide-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 0 15px;
+    width: 320px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* 기본적으로 숨김 */
+}
+
+.slide-card:first-child {
+    display: block; /* 첫 번째 카드만 보이게 */
+}
+
+.slide-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #0158A8;
+}
+
+.slide-content {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.navigation-arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.arrow {
+    cursor: pointer;
+    font-size: 24px;
+    color: #0158A8;
+    background: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.arrow:hover {
+    background: #0158A8;
+    color: white;
+}
+
+.kospi-info {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px 0;
+    text-align: right;
+    border-top: 1px solid #eee;
+    z-index: 1000;
+}
+
+.kospi-value {
+    color: #0158A8;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .slider-container {
+        padding: 20px 10px;
+    }
+
+    .slide-card {
+        width: 280px;
+        padding: 20px;
+    }
+
+    .slide-title {
+        font-size: 20px;
+    }
+
+    .slide-content {
+        font-size: 14px;
+    }
+
+    .arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+} 

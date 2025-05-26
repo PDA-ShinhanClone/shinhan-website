@@ -42,7 +42,7 @@ body {
 }
 
 .top-links a:hover, .top-links-right a:hover {
-    color: #2563eb;
+    color: #333333;
 }
 
 .top-links-right .highlight {
@@ -408,41 +408,86 @@ body {
 
 /* Quick Service Section */
 .quick-service {
-    background: #4b5563;
-    padding: 32px 0;
-    color: white;
+    padding: 40px 0;
+    background-color: #f8f9fa;
+}
+
+.service-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.tab-btn {
+    padding: 10px 30px;
+    border: none;
+    background: none;
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-btn.active {
+    color: #0066cc;
+    font-weight: bold;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0066cc;
+}
+
+.service-content {
+    display: none;
+}
+
+.service-content.active {
+    display: block;
 }
 
 .service-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .service-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
     text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
 }
 
 .service-icon {
-    width: 48px;
-    height: 48px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    margin: 0 auto 12px;
+    font-size: 32px;
+    margin-bottom: 15px;
 }
 
 .service-item h4 {
-    font-weight: 500;
-    margin-bottom: 8px;
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    color: #333;
 }
 
 .service-item p {
     font-size: 14px;
-    color: #d1d5db;
+    color: #666;
+    margin: 0;
 }
 
 /* News Section */
