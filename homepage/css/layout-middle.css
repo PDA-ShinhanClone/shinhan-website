@@ -7,7 +7,15 @@ body {
 .middle-container {
     margin: 0 auto;
     padding: 0 20px;
+    max-width: 1200px; 
 }
+.middle-events-grid {
+    display: grid;
+    justify-content: center;
+    /* 기존: grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 260px)); /* ✅ 반응형으로 변경 */
+    gap: 24px; /* gap도 너무 작았기에 조금 키우면 보기 좋음 */
+  }
 
 /* Top Utility Bar */
 .middle-top-bar {
@@ -615,15 +623,9 @@ body {
     margin-bottom: 32px;
 }
 
-.middle-events-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 4px;
-}
 
 .middle-event-card {
     height: 420px;
-    width: 100%;
     padding: 24px;
     text-align: center;
     position: relative;
@@ -767,10 +769,11 @@ body {
 
 .middle-els-header {
     flex-shrink: 0;
-    min-width: 400px; /* 적절한 최소 너비 */
-      
+    min-width: auto; /* 적절한 최소 너비 */
+    width: 100%;
     margin-bottom: 32px;
     color: #222;
+    flex: 1.5 1 10%;
 }
 .middle-blue-text{
     color: rgb(21, 152, 220);
@@ -823,12 +826,14 @@ body {
 
 .middle-els-grid {
     display: flex;
-    gap: 48px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 260px)); 
     align-items: flex-start;
+    margin: 0 auto;
 }
 
 .middle-els-content {
-    flex: 0 0 340px;
+    flex: 1 5 60%;
 }
 
 .middle-els-cards {
@@ -841,11 +846,12 @@ body {
 
 .middle-els-card-item {
     height: 350px;
-    width: 236px;
+    width: 100%; /* ✅ 반응형으로 변경 */
+    max-width: 200px; /* ✅ 최대 너비 제한 */
     color: #fff;
     box-shadow: 0 4px 16px rgba(91,126,220,0.middle-12);
     padding: 40px 32px 32px 32px;
-    flex: 1 1 0;
+    flex: 1 1 auto;  /* ✅ 자동 너비로 유연하게 확장 */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1311,10 +1317,7 @@ body {
         gap: 24px;
     }
     
-    .middle-events-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
+
     .middle-els-grid {
         grid-template-columns: 1fr;
         gap: 32px;
