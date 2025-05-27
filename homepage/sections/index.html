@@ -778,6 +778,8 @@
 
 
 
+
+
 <script>
     let currentSlide = 0;
     let isPlaying = true;
@@ -794,12 +796,12 @@
         const slides = document.querySelectorAll('.slide');
         const indicators = document.querySelectorAll('.indicator');
         const categoryBtns = document.querySelectorAll('.category-btn');
-
+        
         // 슬라이드 변경
         slides.forEach((slide, i) => {
             slide.classList.toggle('active', i === index);
         });
-
+        
         // 인디케이터 변경
         indicators.forEach((indicator, i) => {
             indicator.classList.toggle('active', i === index);
@@ -834,12 +836,13 @@
         isPlaying = !isPlaying;
         const controlBtn = document.querySelector('.control-btn');
         controlBtn.textContent = isPlaying ? '⏸️' : '▶️';
-
+        /*
         if (isPlaying) {
-            // startAutoPlay();
+            startAutoPlay();
         } else {
             stopAutoPlay();
         }
+        */
     }
 
     function startAutoPlay() {
@@ -861,9 +864,9 @@
     });
 
     // 서비스 카테고리 버튼 클릭 이벤트
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         const categoryBtns = document.querySelectorAll('.category-btn');
-
+        
         categoryBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 const slideIndex = parseInt(btn.dataset.slide);
@@ -872,91 +875,90 @@
             });
         });
 
-        // 초기 배경 이미지 설정 (핫클릭 페이지로!)
+        // 초기 배경 이미지 설정
         showSlide(3);
     });
 
-    const tabTitleMap = {
-        els: 'ELS/DLS',
-        fund: '펀드',
-        wrap: '랩(Wrap)'
-    };
+     const tabTitleMap = {
+    els: 'ELS/DLS',
+    fund: '펀드',
+    wrap: '랩(Wrap)'
+};
 
-    const gradientMap = {
-        els: ['middle-gradient-1', 'middle-gradient-2', 'middle-gradient-3'],
-        fund: ['middle-gradient-fund-1', 'middle-gradient-fund-2', 'middle-gradient-fund-3'],
-        wrap: ['middle-gradient-wrap-1', 'middle-gradient-wrap-2', 'middle-gradient-wrap-3'],
-    };
+const gradientMap = {
+    els: ['middle-gradient-1', 'middle-gradient-2', 'middle-gradient-3'],
+    fund: ['middle-gradient-fund-1', 'middle-gradient-fund-2', 'middle-gradient-fund-3'],
+    wrap: ['middle-gradient-wrap-1', 'middle-gradient-wrap-2', 'middle-gradient-wrap-3'],
+};
 
-    document.addEventListener('DOMContentLoaded', function () {
-        const tabButtons = document.querySelectorAll('.middle-tab-btn');
-        const blueText = document.querySelector('.middle-blue-text');
+document.addEventListener('DOMContentLoaded', function () {
+    const tabButtons = document.querySelectorAll('.middle-tab-btn');
+    const blueText = document.querySelector('.middle-blue-text');
 
-        tabButtons.forEach(button => {
-            button.addEventListener('click', function () {
-                // Remove active class from all buttons
-                tabButtons.forEach(btn => btn.classList.remove('middle-active'));
-                // Add active class to clicked button
-                this.classList.add('middle-active');
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // Remove active class from all buttons
+            tabButtons.forEach(btn => btn.classList.remove('middle-active'));
+            // Add active class to clicked button
+            this.classList.add('middle-active');
 
-                // Switch tab content
-                const tab = this.getAttribute('data-tab');
-                document.querySelectorAll('.middle-tab-content').forEach(tc => tc.classList.remove('middle-active'));
-                document.querySelector('.middle-tab-' + tab).classList.add('middle-active');
+            // Switch tab content
+            const tab = this.getAttribute('data-tab');
+            document.querySelectorAll('.middle-tab-content').forEach(tc => tc.classList.remove('middle-active'));
+            document.querySelector('.middle-tab-' + tab).classList.add('middle-active');
 
-                // Update header title
-                document.getElementById('tab-title').textContent = tabTitleMap[tab];
+            // Update header title
+            document.getElementById('tab-title').textContent = tabTitleMap[tab];
 
-                // Change text color
-                if (tab === 'fund') {
-                    blueText.style.color = '#587cc5';
-                } else if (tab === 'wrap') {
-                    blueText.style.color = '#7a5ab4';
-                } else {
-                    blueText.style.color = 'rgb(21, 152, 220)';
-                }
+            // Change text color
+            if (tab === 'fund') {
+                blueText.style.color = '#587cc5';
+            } else if (tab === 'wrap') {
+                blueText.style.color = '#7a5ab4';
+            } else {
+                blueText.style.color = 'rgb(21, 152, 220)';
+            }
 
-                // Update gradient backgrounds
-                const cardItems = document.querySelectorAll('.middle-tab-' + tab + ' .middle-els-card-item');
-                cardItems.forEach((card, index) => {
-                    card.classList.forEach(cls => {
-                        if (cls.startsWith('middle-gradient-')) card.classList.remove(cls);
-                    });
-                    const newClass = gradientMap[tab][index];
-                    if (newClass) card.classList.add(newClass);
+            // Update gradient backgrounds
+            const cardItems = document.querySelectorAll('.middle-tab-' + tab + ' .middle-els-card-item');
+            cardItems.forEach((card, index) => {
+                card.classList.forEach(cls => {
+                    if (cls.startsWith('middle-gradient-')) card.classList.remove(cls);
                 });
+                const newClass = gradientMap[tab][index];
+                if (newClass) card.classList.add(newClass);
             });
         });
     });
-    // 탭 메뉴 기능 추가
-    document.addEventListener('DOMContentLoaded', function () {
-        const menuTabs = document.querySelectorAll('.menu-tab');
+});
 
-        menuTabs.forEach(tab => {
-            tab.addEventListener('click', function () {
-                // 모든 탭에서 active 클래스 제거
-                menuTabs.forEach(t => {
-                    t.classList.remove('active');
-                    t.style.fontWeight = 'normal';
-                    t.querySelector('.tab-underline').style.display = 'none';
-                });
-
-                // 클릭된 탭에 active 클래스 추가
-                this.classList.add('active');
-                this.style.fontWeight = 'bold';
-                this.querySelector('.tab-underline').style.display = 'block';
+// 탭 메뉴 기능 추가
+document.addEventListener('DOMContentLoaded', function() {
+    const menuTabs = document.querySelectorAll('.menu-tab');
+    
+    menuTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            // 모든 탭에서 active 클래스 제거
+            menuTabs.forEach(t => {
+                t.classList.remove('active');
+                t.style.fontWeight = 'normal';
+                t.querySelector('.tab-underline').style.display = 'none';
             });
+            
+            // 클릭된 탭에 active 클래스 추가
+            this.classList.add('active');
+            this.style.fontWeight = 'bold';
+            this.querySelector('.tab-underline').style.display = 'block';
         });
-
-        // 초기 상태 설정 
-        const initialTab = document.querySelectorAll('.menu-tab')[2];
-        if (initialTab) {
-            initialTab.classList.add('active');
-            initialTab.style.fontWeight = 'bold';
-            const underline = initialTab.querySelector('.tab-underline');
-            if (underline) underline.style.display = 'block';
-        }
     });
+
+    // 초기 상태 설정 (첫 번째 탭 활성화)
+    const firstTab = document.querySelector('.menu-tab');
+    if (firstTab) {
+        firstTab.style.fontWeight = 'bold';
+        firstTab.querySelector('.tab-underline').style.display = 'block';
+    }
+});
 </script>
 </body>
 
