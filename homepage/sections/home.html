@@ -240,47 +240,68 @@
     </div>
 
     <!-- Bottom Menu Section -->
-    <div class="tab-menu" style="width: 978.8px; height: 160px; background-color: #333333; padding: 0px 84px 0px 40px; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); z-index: 1;">
-        <div style="display: flex; justify-content: space-between; align-items: center; height: 100%;">
-            <div class="menu-group" style="display: flex; align-items: center;">
-                <h3 style="color: #FFFFFF; font-size: 14px; font-family: nanumB, 돋움, Dotum, 굴림, Gulim; margin-right: 40px;">차곡이신가요?</h3>
-                <div class="icon-group" style="display: flex; gap: 30px;">
+    <div class="tab-menu" style="width: 100%; height: 160px; background-color: rgba(51, 51, 51, 0.9); position: relative; margin-top: 60px;">
+        <div style="max-width: 1080px; margin: 0 auto; height: 100%; display: flex; justify-content: space-between; align-items: center;">
+            <!-- 왼쪽 메뉴 영역 -->
+            <div style="width: 680px; height: 160px; display: flex; gap: 30px; padding: 20px;">
+                <div class="menu-group">
+                    <h3 style="color: #FFFFFF; font-size: 14px; font-family: nanumB, 돋움, Dotum, 굴림, Gulim; margin-bottom: 12px;">처음이신가요?</h3>
                     <div class="icon-item" style="text-align: center;">
-                        <img src="../imgs/icon-chart.png" alt="연금자산현황" style="width: 24px; height: 24px; margin-bottom: 5px;">
-                        <p style="color: #FFFFFF; font-size: 12px;">연금자산현황</p>
+                        <img src="../imgs/top_banner_icon1.png" alt="연금자산현황" style="width: 24px; height: 24px; margin-bottom: 5px;">
+                        <p style="color: #FFFFFF; font-size: 13px; margin: 0;">연금자산현황</p>
+                    </div>
+                </div>
+
+                <div class="menu-group">
+                    <h3 style="color: #FFFFFF; font-size: 14px; font-family: nanumB, 돋움, Dotum, 굴림, Gulim; margin-bottom: 12px;">편리하게 이용해보세요!</h3>
+                    <div class="icon-item" style="text-align: center;">
+                        <img src="../imgs/top_banner_icon2.png" alt="퇴직연금잔고" style="width: 24px; height: 24px; margin-bottom: 5px;">
+                        <p style="color: #FFFFFF; font-size: 13px; margin: 0;">퇴직연금잔고</p>
+                    </div>
+                </div>
+
+                <div class="menu-group">
+                    <h3 style="color: #FFFFFF; font-size: 14px; font-family: nanumB, 돋움, Dotum, 굴림, Gulim; margin-bottom: 12px;">퇴직연금 고객이신가요?</h3>
+                    <div class="icon-item" style="text-align: center;">
+                        <img src="../imgs/top_banner_icon3.png" alt="입금하기" style="width: 24px; height: 24px; margin-bottom: 5px;">
+                        <p style="color: #FFFFFF; font-size: 13px; margin: 0;">입금하기</p>
                     </div>
                 </div>
             </div>
 
-            <div class="menu-group" style="display: flex; align-items: center;">
-                <h3 style="color: #FFFFFF; font-size: 14px; font-family: nanumB, 돋움, Dotum, 굴림, Gulim; margin-right: 40px;">편리하게 이용해보세요!</h3>
-                <div class="icon-group" style="display: flex; gap: 30px;">
-                    <div class="icon-item" style="text-align: center;">
-                        <img src="../imgs/icon-notice.png" alt="퇴직연금공고" style="width: 24px; height: 24px; margin-bottom: 5px;">
-                        <p style="color: #FFFFFF; font-size: 12px;">퇴직연금공고</p>
-                    </div>
-                    <div class="icon-item" style="text-align: center;">
-                        <img src="../imgs/icon-join.png" alt="입금하기" style="width: 24px; height: 24px; margin-bottom: 5px;">
-                        <p style="color: #FFFFFF; font-size: 12px;">입금하기</p>
-                    </div>
+            <!-- 새소식(공지) 영역 -->
+            <div style="width: 370px; height: 160px; background: rgba(255, 255, 255, 0.1); padding: 20px; display: flex; flex-direction: column;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                    <h3 style="color: #FFFFFF; font-size: 16px; margin: 0;">새소식</h3>
+                    <button style="background: none; border: none; color: #FFFFFF; font-size: 20px; cursor: pointer;">+</button>
                 </div>
+                <ul style="list-style: none; padding: 0; margin: 0; flex-grow: 1;">
+                    <li style="margin-bottom: 8px;">
+                        <a href="#" style="color: #FFFFFF; text-decoration: none; font-size: 13px; display: flex; justify-content: space-between; align-items: center;">
+                            <span>[변경] 신용/대출 가능 종목 변경 (2025/05/27)</span>
+                            <span style="color: #cccccc;">05.27</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #FFFFFF; text-decoration: none; font-size: 13px; display: flex; justify-content: space-between; align-items: center;">
+                            <span>계좌개설 및 이체 등 일부 업무 임시 중단 안내</span>
+                            <span style="color: #cccccc;">05.26</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
 
-            <div class="menu-group" style="display: flex; align-items: center;">
-                <h3 style="color: #FFFFFF; font-size: 14px; font-family: nanumB, 돋움, Dotum, 굴림, Gulim; margin-right: 40px;">퇴직연금 고객이신가요?</h3>
-                <div class="icon-group" style="display: flex; gap: 30px;">
-                    <div class="icon-item" style="text-align: center;">
-                        <img src="../imgs/icon-doc.png" alt="가입내역" style="width: 24px; height: 24px; margin-bottom: 5px;">
-                        <p style="color: #FFFFFF; font-size: 12px;">가입내역</p>
-                    </div>
-                </div>
-            </div>
+            <!-- 하단 접기 버튼 -->
+            <button type="button" style="position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%); width: 24px; height: 24px; background-color: rgba(85, 85, 85, 0.8); border: none; border-radius: 50%; cursor: pointer; display: flex; justify-content: center; align-items: center; padding: 0;">
+                <svg width="14" height="14" viewBox="0 0 24 24" style="fill: none; stroke: #ffffff; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;">
+                    <path d="M6 9l6 6 6-6" />
+                </svg>
+            </button>
         </div>
-        <button type="button" class="more-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%);">
-            <img src="../imgs/icon-more.png" alt="더보기" style="width: 20px; height: 20px;">
-        </button>
     </div>
+
 </div>
+
 
 <!--middle part-->
 <!-- Events Section -->
@@ -518,7 +539,18 @@
         </div>
     </div>
 </div>
+
+
+
+
 <!--bottom part-->
+<div class = "homepage-bottom">
+    <div class="bottom-bg-wrapper">
+    <header>
+        <h1>자산관리,</h1>
+        <h2><span class="bottom-highlight">신한투자증권</span>과 함께 하세요!</h2>
+    </header>
+
 <div class="bottom-section-wrapper">
     <div class="bottom-circle-item">
       <div class="bottom-circle-content">
@@ -664,6 +696,8 @@
     <img src="../imgs/bottom-40.svg" alt="웹어워드">
     <img src="../imgs/bottom-41.svg" alt="OneShinhan">
   </div>
+</div>
+</div>
 </div>
 </div>
 </footer>
