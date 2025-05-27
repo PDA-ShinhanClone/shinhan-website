@@ -154,35 +154,34 @@
                     </div>
                     <div class="els-card-item gradient-2">
                         <div class="card-number">2</div>
-                        <div class="card-label">펀드명</div>
                         <div class="card-assets">유진챔피언단기채증권자투자신탁</div>
                         <div class="card-desc">수익률 0.30%</div>
                     </div>
                     <div class="els-card-item gradient-3">
                         <div class="card-number">3</div>
 
-                        <div class="card-assets">우리나라초단기채</div>
+                        <div class="card-assets">우리나라초단기채[채권](C-e) </div>
                         <div class="card-desc">수익률 0.26%</div>
                     </div>
                 </div>
                 <div class="els-cards tab-content tab-wrap">
                     <div class="els-card-item gradient-1">
                         <div class="card-number">1</div>
-                        <div class="card-label">랩 상품</div>
-                        <div class="card-assets">신한 Wrap</div>
-                        <div class="card-desc">Wrap 상품 안내</div>
+                        <div class="card-label">프로PB랩<br>마스터후취형</div>
+                        <div class="card-assets">최소투자기간: 1년</div>
+                        <div class="card-desc">최소가입금액: 30,000,000원</div>
                     </div>
                     <div class="els-card-item gradient-2">
                         <div class="card-number">2</div>
-                        <div class="card-label">랩 상품</div>
-                        <div class="card-assets">유진 Wrap</div>
-                        <div class="card-desc">Wrap 상품 안내</div>
+                        <div class="card-label">프로PB랩 올인원형</div>
+                        <div class="card-assets">최소투자기간: 1년</div>
+                        <div class="card-desc">최소가입금액: 30,000,000원</div>
                     </div>
                     <div class="els-card-item gradient-3">
                         <div class="card-number">3</div>
-                        <div class="card-label">랩 상품</div>
-                        <div class="card-assets">우리 Wrap</div>
-                        <div class="card-desc">Wrap 상품 안내</div>
+                        <div class="card-label">프로PB랩<br>마스터혼합형</div>
+                        <div class="card-assets">최소투자기간: 1년</div>
+                        <div class="card-desc">최소가입금액: 30,000,000원</div>
                     </div>
                 </div>
                 <ul class="caution marT20 contMid_info">
@@ -295,29 +294,40 @@
 
 <script>
 const tabTitleMap = {
-  els: 'ELS/DLS',
-  fund: '펀드',
-  wrap: '랩(Wrap)'
+    els: 'ELS/DLS',
+    fund: '펀드',
+    wrap: '랩(Wrap)'
 };
-document.querySelectorAll('.stock-category').forEach(cat => {
-  cat.addEventListener('click', function() {
-    document.querySelectorAll('.stock-category').forEach(c => c.classList.remove('active'));
-    this.classList.add('active');
-    // 여기에 카테고리별 데이터 전환 로직 추가 가능
-  });
-});
 
-document.querySelectorAll('.tab-btn').forEach(btn => {
-  btn.addEventListener('click', function() {
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    this.classList.add('active');
-    // 탭 내용 전환
-    const tab = this.getAttribute('data-tab');
-    document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
-    document.querySelector('.tab-' + tab).classList.add('active');
-    // 헤더 타이틀도 변경
-    document.getElementById('tab-title').textContent = tabTitleMap[tab];
-  });
+document.addEventListener('DOMContentLoaded', function() {
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const blueText = document.querySelector('.blue-text');
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Switch tab content
+            const tab = this.getAttribute('data-tab');
+            document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+            document.querySelector('.tab-' + tab).classList.add('active');
+            
+            // Update header title
+            document.getElementById('tab-title').textContent = tabTitleMap[tab];
+            
+            // Change text color based on selected tab
+            if (this.dataset.tab === 'fund') {
+                blueText.style.color = '#587cc5';
+            } else if (this.dataset.tab === 'wrap') {
+                blueText.style.color = '#7a5ab4';
+            } else {
+                blueText.style.color = 'rgb(21, 152, 220)'; // Default color
+            }
+        });
+    });
 });
 </script>
 
