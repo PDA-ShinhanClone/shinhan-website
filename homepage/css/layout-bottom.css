@@ -1,30 +1,32 @@
 
 
-body {
-  margin: 0;
+.homepage-bottom {
   font-family: 'Arial', sans-serif, '돋움';
   background-color: #f1f4f9;
   color: #333;
 }
-header {
+
+.homepage-bottom header {
   text-align: center;
   padding: 40px 20px 0px;
 }
-header h1 {
+
+.homepage-bottom header h1 {
   font-size: 50px;
   color: #152475;
   margin-bottom: 10px;
   line-height: 1;
 }
-header h2 {
+
+.homepage-bottom header h2 {
   font-size: 50px;
   color: #333333;
-  font-weight:normal;
+  font-weight: normal;
   margin-top: 0;
   line-height: 1;
 }
 
-header h2 .bottom-highlight {
+.homepage-bottom header h2 .bottom-highlight {
   color: #1598dc; /* 신한투자증권만 색상 지정 */
 }
 
