@@ -194,26 +194,84 @@
     <!-- Quick Service Section -->
     <section class="quick-service">
         <div class="container">
-            <div class="service-grid">
-                <div class="service-item">
-                    <div class="service-icon">⏰</div>
-                    <h4>취업이신가요?</h4>
-                    <p>편리하게 이용하고 싶다면?</p>
+            <div class="service-tabs">
+                <button class="tab-btn active">서비스</button>
+                <button class="tab-btn">투자정보</button>
+                <button class="tab-btn">핫클릭</button>
+            </div>
+            
+            <div class="service-content active">
+                <div class="service-grid">
+                    <div class="service-item">
+                        <div class="service-icon">📊</div>
+                        <h4>연구자산</h4>
+                        <p>연구자산 현황 조회</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">💰</div>
+                        <h4>계좌개설</h4>
+                        <p>온라인 계좌개설</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">📈</div>
+                        <h4>주식매매</h4>
+                        <p>국내주식 매매</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">🌏</div>
+                        <h4>해외주식</h4>
+                        <p>해외주식 매매</p>
+                    </div>
                 </div>
-                <div class="service-item">
-                    <div class="service-icon">💻</div>
-                    <h4>편리하게 이용하고 싶다면?</h4>
-                    <p>최적화된 고객서비스</p>
+            </div>
+
+            <div class="service-content">
+                <div class="service-grid">
+                    <div class="service-item">
+                        <div class="service-icon">📰</div>
+                        <h4>시황정보</h4>
+                        <p>국내외 시장동향</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">📊</div>
+                        <h4>투자전략</h4>
+                        <p>전문가 투자전략</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">📈</div>
+                        <h4>시세정보</h4>
+                        <p>실시간 시세조회</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">📑</div>
+                        <h4>공시정보</h4>
+                        <p>기업 공시정보</p>
+                    </div>
                 </div>
-                <div class="service-item">
-                    <div class="service-icon">📊</div>
-                    <h4>업종별로 고객이신가요?</h4>
-                    <p>업종별</p>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">📄</div>
-                    <h4>거래내역</h4>
-                    <p>거래내역</p>
+            </div>
+
+            <div class="service-content">
+                <div class="service-grid">
+                    <div class="service-item">
+                        <div class="service-icon">🔥</div>
+                        <h4>인기상품</h4>
+                        <p>실시간 인기상품</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">🎯</div>
+                        <h4>추천종목</h4>
+                        <p>오늘의 추천종목</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">📱</div>
+                        <h4>모바일앱</h4>
+                        <p>모바일 서비스</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">💡</div>
+                        <h4>이벤트</h4>
+                        <p>진행중인 이벤트</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -701,6 +759,24 @@
         carouselContainer.addEventListener('mouseenter', stopAutoPlay);
         carouselContainer.addEventListener('mouseleave', () => {
             if (isPlaying) startAutoPlay();
+        });
+
+        // Quick Service 탭 기능
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabBtns = document.querySelectorAll('.service-tabs .tab-btn');
+            const tabContents = document.querySelectorAll('.service-content');
+
+            tabBtns.forEach((btn, index) => {
+                btn.addEventListener('click', () => {
+                    // 모든 탭과 컨텐츠의 active 클래스 제거
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+
+                    // 클릭된 탭과 해당 컨텐츠에 active 클래스 추가
+                    btn.classList.add('active');
+                    tabContents[index].classList.add('active');
+                });
+            });
         });
     </script>
 </body>
