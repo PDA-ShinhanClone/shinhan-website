@@ -188,7 +188,9 @@ body {
 .banner-section {
     position: relative;
     overflow: hidden;
-}
+    padding-top: 32px; /* 또는 0으로 */
+  }
+  
 
 .service-background {
     position: absolute;

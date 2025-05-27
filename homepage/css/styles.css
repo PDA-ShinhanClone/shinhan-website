@@ -128,9 +128,11 @@ body {
 
 /* Banner Section */
 .banner-section {
-    background: #f8f9fa;
-    padding: 32px 0;
-}
+    position: relative;
+    overflow: hidden;
+    padding-top: 100px; /* 또는 0으로 */
+  }
+  
 
 .carousel-container {
     position: relative;

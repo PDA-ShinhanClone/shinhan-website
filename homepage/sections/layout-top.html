@@ -67,7 +67,7 @@
 
 
     <!-- Main Banner Carousel -->
-    <section class="banner-section" style="width: 100%; margin: 0 auto; padding-top: 100px;">
+    <section class="banner-section">
         <div class="container" style="width: 940px; margin: 0 auto; position: relative;">
             <!-- Navigation Arrows -->
             <button class="carousel-arrow prev" onclick="prevSlide()" style="position: absolute; left: -50px; top: 200px; width: 40px; height: 40px; background: rgba(255, 255, 255, 0.8); border: none; font-family: Arial; font-size: 24px; cursor: pointer; z-index: 10; color: #000000;">&lt;</button>
@@ -111,14 +111,7 @@
 
                         <!-- 추천상품 슬라이드 -->
                         <div class="slide">
-                            <div class="slide-content" style="display: flex; justify-content: center; align-items: center; width: 940px; height: 400px; background: #ffffff; position: relative;">
-                                <div style="position: relative; width: 200px; height: 400px;">
-                                    <img src="../imgs/배경5.png" alt="추천상품 배경" style="width: 100%; height: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-                                </div>
-                                <div style="position: absolute; left: 50%; transform: translateX(-50%); bottom: 20px;">
-                                    <p style="text-align: center; color: #333; font-size: 14px;">펀드, ELS/DLS, 랩 인기상품 보기</p>
-                                </div>
-                            </div>
+                            
                         </div>
 
                         <!-- 투자정보 슬라이드 -->
@@ -238,45 +231,67 @@
     </div>
 
     <!-- Bottom Menu Section -->
-    <div class="tab-menu" style="width: 978.8px; height: 160px; background-color: #333333; padding: 0px 84px 0px 40px; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); z-index: 1;">
-        <div style="display: flex; justify-content: space-between; align-items: center; height: 100%;">
-            <div class="menu-group" style="display: flex; align-items: center;">
-                <h3 style="color: #FFFFFF; font-size: 14px; font-family: nanumB, 돋움, Dotum, 굴림, Gulim; margin-right: 40px;">차곡이신가요?</h3>
-                <div class="icon-group" style="display: flex; gap: 30px;">
-                    <div class="icon-item" style="text-align: center;">
-                        <img src="../imgs/icon-chart.png" alt="연금자산현황" style="width: 24px; height: 24px; margin-bottom: 5px;">
-                        <p style="color: #FFFFFF; font-size: 12px;">연금자산현황</p>
-                    </div>
+    <div class="tab-menu" style="width: 100%; height: 160px; background-color: rgba(51, 51, 51, 0.9); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); z-index: 1;">
+        <div style="max-width: 1000px; margin: 0 auto; height: 100%; display: flex; justify-content: space-between;">
+            <!-- 왼쪽 컴포넌트 -->
+            <div style="width: 608px; height: 160px; position: relative;">
+                <!-- 상단 링크 메뉴 -->
+                <div style="display: flex; gap: 20px; position: absolute; top: 20px; left: 20px;">
+                    <a href="#" class="menu-link" style="color: #FFFFFF; font-size: 16px; font-family: nanumB, 돋움, Dotum, 굴림, Gulim; text-decoration: none; position: relative;">
+                        처음이신가요?
+                        <span class="underline" style="display: none; position: absolute; bottom: -5px; left: 0; width: 100%; height: 2px; background-color: #FFFFFF;"></span>
+                    </a>
+                    <a href="#" class="menu-link" style="color: #FFFFFF; font-size: 16px; font-family: nanumB, 돋움, Dotum, 굴림, Gulim; text-decoration: none; position: relative;">
+                        편리하게 이용해보세요!
+                        <span class="underline" style="display: none; position: absolute; bottom: -5px; left: 0; width: 100%; height: 2px; background-color: #FFFFFF;"></span>
+                    </a>
+                    <a href="#" class="menu-link default-active" style="color: #FFFFFF; font-size: 16px; font-family: nanumB, 돋움, Dotum, 굴림, Gulim; text-decoration: none; position: relative; font-weight: bold;">
+                        퇴직연금 고객이신가요?
+                        <span class="underline" style="display: block; position: absolute; bottom: -5px; left: 0; width: 100%; height: 2px; background-color: #FFFFFF;"></span>
+                    </a>
                 </div>
+                
+                <!-- 하단 아이콘 메뉴 -->
+                <div style="display: flex; justify-content: center; align-items: center; gap: 40px; position: absolute; bottom: 20px; left: 0; right: 0; margin: 0 auto; width: fit-content;">
+                    <a href="#" class="icon-item" style="text-align: center; text-decoration: none; width: 80px;">
+                        <img src="../imgs/top_banner_icon1.png" alt="연금자산현황" style="width: 24px; height: 24px; margin-bottom: 5px;">
+                        <p style="color: #FFFFFF; font-size: 13px; margin: 0;">연금자산현황</p>
+                    </a>
+                    <a href="#" class="icon-item" style="text-align: center; text-decoration: none; width: 80px;">
+                        <img src="../imgs/top_banner_icon2.png" alt="퇴직연금잔고" style="width: 24px; height: 24px; margin-bottom: 5px;">
+                        <p style="color: #FFFFFF; font-size: 13px; margin: 0;">퇴직연금잔고</p>
+                    </a>
+                    <a href="#" class="icon-item" style="text-align: center; text-decoration: none; width: 80px;">
+                        <img src="../imgs/top_banner_icon3.png" alt="입금하기" style="width: 24px; height: 24px; margin-bottom: 5px;">
+                        <p style="color: #FFFFFF; font-size: 13px; margin: 0;">입금하기</p>
+                    </a>
+                    <a href="#" class="icon-item" style="text-align: center; text-decoration: none; width: 80px;">
+                        <img src="../imgs/top_banner_icon4.png" alt="거래내역" style="width: 24px; height: 24px; margin-bottom: 5px;">
+                        <p style="color: #FFFFFF; font-size: 13px; margin: 0;">거래내역</p>
+                    </a>
+                    <button type="button" style="width: 24px; height: 24px; background-color: rgba(85, 85, 85, 0.8); border: none; border-radius: 50%; cursor: pointer; display: flex; justify-content: center; align-items: center; padding: 0;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" style="fill: none; stroke: #ffffff; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- 하단 화살표 버튼 -->
+                
             </div>
 
-            <div class="menu-group" style="display: flex; align-items: center;">
-                <h3 style="color: #FFFFFF; font-size: 14px; font-family: nanumB, 돋움, Dotum, 굴림, Gulim; margin-right: 40px;">편리하게 이용해보세요!</h3>
-                <div class="icon-group" style="display: flex; gap: 30px;">
-                    <div class="icon-item" style="text-align: center;">
-                        <img src="../imgs/icon-notice.png" alt="퇴직연금공고" style="width: 24px; height: 24px; margin-bottom: 5px;">
-                        <p style="color: #FFFFFF; font-size: 12px;">퇴직연금공고</p>
-                    </div>
-                    <div class="icon-item" style="text-align: center;">
-                        <img src="../imgs/icon-join.png" alt="입금하기" style="width: 24px; height: 24px; margin-bottom: 5px;">
-                        <p style="color: #FFFFFF; font-size: 12px;">입금하기</p>
-                    </div>
+            <!-- 오른쪽 컴포넌트 (새소식) -->
+            <div style="width: 370px; height: 160px; padding: 20px;">
+                <div class="notice-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                    <h3 style="color: #FFFFFF; font-size: 14px; font-family: nanumB, 돋움, Dotum, 굴림, Gulim; margin: 0;">새소식(공지)</h3>
+                    
                 </div>
-            </div>
-
-            <div class="menu-group" style="display: flex; align-items: center;">
-                <h3 style="color: #FFFFFF; font-size: 14px; font-family: nanumB, 돋움, Dotum, 굴림, Gulim; margin-right: 40px;">퇴직연금 고객이신가요?</h3>
-                <div class="icon-group" style="display: flex; gap: 30px;">
-                    <div class="icon-item" style="text-align: center;">
-                        <img src="../imgs/icon-doc.png" alt="가입내역" style="width: 24px; height: 24px; margin-bottom: 5px;">
-                        <p style="color: #FFFFFF; font-size: 12px;">가입내역</p>
-                    </div>
+                <div class="notice-content" style="color: #FFFFFF;">
+                    <p style="margin: 0 0 10px 0; font-size: 13px;">[변경] 신용/대출 가능 종목 변경 (2025/05/27)</p>
+                    <p style="margin: 0; font-size: 13px;">계좌개설 및 이체 등 일부 업무 임시 중단 안내 (...)</p>
                 </div>
             </div>
         </div>
-        <button type="button" class="more-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%);">
-            <img src="../imgs/icon-more.png" alt="더보기" style="width: 20px; height: 20px;">
-        </button>
     </div>
 
     <script>
@@ -286,7 +301,7 @@
         const topBg = document.querySelector('.top-bg');
         const backgrounds = [
             '../imgs/배경1.png',
-            '../imgs/배경2.PNG',
+            '../imgs/배경5.png',
             '../imgs/배경3.jpg',
             '../imgs/배경2.jpg'
         ];
@@ -375,6 +390,32 @@
 
             // 초기 배경 이미지 설정
             showSlide(0);
+        });
+
+        // 페이지 로드 시 기본 활성화 메뉴 설정
+        document.addEventListener('DOMContentLoaded', function() {
+            const defaultActiveMenu = document.querySelector('.default-active');
+            if (defaultActiveMenu) {
+                defaultActiveMenu.style.fontWeight = 'bold';
+                defaultActiveMenu.querySelector('.underline').style.display = 'block';
+            }
+        });
+
+        // 메뉴 링크 클릭 이벤트
+        document.querySelectorAll('.menu-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // 모든 링크에서 active 클래스와 밑줄 제거
+                document.querySelectorAll('.menu-link').forEach(l => {
+                    l.style.fontWeight = 'normal';
+                    l.querySelector('.underline').style.display = 'none';
+                });
+                
+                // 클릭된 링크에 효과 추가
+                this.style.fontWeight = 'bold';
+                this.querySelector('.underline').style.display = 'block';
+            });
         });
     </script>
 </body>
