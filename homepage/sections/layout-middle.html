@@ -5,58 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>신한투자증권</title>
     <link rel="stylesheet" href="../css/layout-middle.css">
+
+    
 </head>
 <body>
-
-<!-- Footer Navigation -->
-<footer class="footer-nav">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-links">
-                <div class="footer-item">
-                    <h4>국내주식 거래하고</h4>
-                    <p>다양한 혜택을 받아보세요</p>
-                </div>
-                <div class="footer-item">
-                    <h4>IPO 이벤트</h4>
-                    <p>공모주 청약 이벤트</p>
-                </div>
-                <div class="footer-item">
-                    <h4>자료조회 이벤트는</h4>
-                    <p>매월 진행됩니다</p>
-                </div>
-                <div class="footer-item">
-                    <h4>국내주식 온라인</h4>
-                    <p>거래 수수료 할인</p>
-                </div>
-            </div>
-            <div class="footer-indicators">
-                <div class="indicator-item">
-                    <span>HOME</span>
-                    <div class="indicator-dot active"></div>
-                </div>
-                <div class="indicator-item">
-                    <span>이벤트</span>
-                    <div class="indicator-dot"></div>
-                </div>
-                <div class="indicator-item">
-                    <span>자금관 계좌개설</span>
-                    <div class="indicator-dot"></div>
-                </div>
-                <div class="indicator-item">
-                    <span>WMP이벤트</span>
-                    <div class="indicator-dot"></div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-actions">
-            <button class="more-btn">더보기 +</button>
-        </div>
-        <div class="footer-top">
-            <button class="top-btn">TOP</button>
-        </div>
-    </div>
-</footer>
 
 <!-- Events Section -->
 <section class="events-section">
@@ -298,6 +250,11 @@ const tabTitleMap = {
     fund: '펀드',
     wrap: '랩(Wrap)'
 };
+const gradientMap = {
+        els: ['gradient-1', 'gradient-2', 'gradient-3'],
+        fund: ['gradient-fund-1', 'gradient-fund-2', 'gradient-fund-3'],
+        wrap: ['gradient-wrap-1', 'gradient-wrap-2', 'gradient-wrap-3'],
+    };
 
 document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.tab-btn');
@@ -326,6 +283,17 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 blueText.style.color = 'rgb(21, 152, 220)'; // Default color
             }
+             // 🎯 카드 배경 변경
+             const cardItems = document.querySelectorAll('.tab-' + tab + ' .els-card-item');
+            cardItems.forEach((card, index) => {
+                card.classList.forEach(cls => {
+                    if (cls.startsWith('gradient-')) card.classList.remove(cls);
+                });
+                const newClass = gradientMap[tab][index];
+                if (newClass) card.classList.add(newClass);
+            });
+
+            
         });
     });
 });

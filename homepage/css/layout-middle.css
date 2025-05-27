@@ -625,30 +625,31 @@ body {
 .events-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    gap: 4px;
 }
 
 .event-card {
-    border-radius: 8px;
+    height: 420px;
+    width: 100%;
     padding: 24px;
     text-align: center;
     position: relative;
 }
 
 .blue-theme {
-    background: #dbeafe;
+    background: rgb(237, 246, 255) !important;
 }
 
 .green-theme {
-    background: #d1fae5;
+    background: rgb(238, 253, 244) !important;
 }
 
 .yellow-theme {
-    background: #fef3c7;
+    background: rgb(255, 251, 232) !important;
 }
 
 .purple-theme {
-    background: #e0e7ff;
+    background: rgb(250, 243, 255) !important;
 }
 
 .event-card h3 {
@@ -687,8 +688,8 @@ body {
 }
 
 .event-icon {
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
     margin: 0 auto 16px auto;
     display: flex;
     align-items: center;
@@ -772,6 +773,9 @@ body {
 }
 
 .els-header {
+    flex-shrink: 0;
+    min-width: 400px; /* 적절한 최소 너비 */
+      
     margin-bottom: 32px;
     color: #222;
 }
@@ -817,6 +821,13 @@ body {
     border-radius: 2px;
 }
 
+.els-title {
+    font-size: 58px;
+    white-space: nowrap;
+    display: inline-block;
+    line-height: 1.2;
+  }
+
 .els-grid {
     display: flex;
     gap: 48px;
@@ -836,10 +847,9 @@ body {
 }
 
 .els-card-item {
-    min-width: 280px;
-    max-width: 320px;
+    height: 350px;
+    width: 236px;
     color: #fff;
-    border-radius: 16px;
     box-shadow: 0 4px 16px rgba(91,126,220,0.12);
     padding: 40px 32px 32px 32px;
     flex: 1 1 0;
@@ -892,6 +902,15 @@ body {
     font-weight: 500;
     margin: 0 4px;
 }
+/* 펀드 전용 배경 색상 */
+.gradient-fund-1 { background: #658fe0; }
+.gradient-fund-2 { background: #587cc5; }
+.gradient-fund-3 { background: #3f61b2; }
+
+/* 랩 전용 배경 색상 */
+.gradient-wrap-1 { background: #7d69cc; }
+.gradient-wrap-2 { background: #7252ad; }
+.gradient-wrap-3 { background: #5e419a; }
 
 .els-disclaimer {
     color: #6b7280;
