@@ -838,7 +838,7 @@
             controlBtn.textContent = isPlaying ? '⏸️' : '▶️';
 
             if (isPlaying) {
-                startAutoPlay();
+                // startAutoPlay();
             } else {
                 stopAutoPlay();
             }
@@ -874,8 +874,8 @@
                 });
             });
 
-            // 초기 배경 이미지 설정
-            showSlide(0);
+            // 초기 배경 이미지 설정 (핫클릭 페이지로!)
+            showSlide(3);
         });
 
         const tabTitleMap = {
