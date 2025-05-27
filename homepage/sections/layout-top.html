@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="top-bg" style="background-image: url('../imgs/배경1.png');">
+    <div class="top-bg" style="background-image: url('../imgs/배경1.png'); width: 100%; height: 870px; margin: 0 auto; background-size: cover; background-position: center; position: relative;">
                          
     <!-- Top Utility Bar -->
     <!-- Updated Header HTML -->
@@ -67,48 +67,42 @@
 
 
     <!-- Main Banner Carousel -->
-    <section class="banner-section">
-
-        <div class="container">
-            <div class="carousel-container">
-                <div class="carousel-wrapper">
-                    <div class="carousel-slides" id="carouselSlides">
+    <section class="banner-section" style="width: 100%; margin: 0 auto; padding-top: 100px;">
+        <div class="container" style="width: 940px; margin: 0 auto; position: relative;">
+            <!-- Navigation Arrows -->
+            <button class="carousel-arrow prev" onclick="prevSlide()" style="position: absolute; left: -50px; top: 200px; width: 40px; height: 40px; background: rgba(255, 255, 255, 0.8); border: none; font-family: Arial; font-size: 24px; cursor: pointer; z-index: 10; color: #000000;">&lt;</button>
+            <button class="carousel-arrow next" onclick="nextSlide()" style="position: absolute; right: -50px; top: 200px; width: 40px; height: 40px; background: rgba(255, 255, 255, 0.8); border: none; font-family: Arial; font-size: 24px; cursor: pointer; z-index: 10; color: #000000;">&gt;</button>
+            
+            <div class="carousel-container" style="height: 400px;">
+                <div class="carousel-wrapper" style="height: 100%;">
+                    <div class="carousel-slides" id="carouselSlides" style="height: 100%; display: flex; align-items: center; justify-content: center;">
                         <!-- 서비스 슬라이드 -->
                         <div class="slide active">
-                            <div class="slide-background">
-                           </div>
-                            <div class="slide-content">
-                                <div class="slide-grid">
+                            <div class="slide-content" style="display: flex; justify-content: center; align-items: center; width: 940px;">
+                                <div class="slide-grid" style="display: flex; justify-content: space-between; width: 100%; padding: 0;">
                                     <!-- ELS 카드 -->
-                                    <div class="slide-card els-card">
-                                        <div class="card-content">
-                                            <div class="card-subtitle">변동성 상품 시대에</div>
-                                            <div class="card-subtitle">대한 상품</div>
-                                            <h3 class="card-title">청약 가능한<br>ELS는?</h3>
-                                            <button class="card-btn">바로가기</button>
-                                        </div>
-                                        <div class="els-background">
-                                            <img src="../imgs/배경1-1.jpg" alt="ELS 배경" class="els-bg-image">
+                                    <div class="slide-card els-card" style="width: 300px; height: 380px; background: #1a237e; border-radius: 15px; overflow: hidden; position: relative;">
+                                        <div class="card-content" style="padding: 30px; position: relative; z-index: 2; color: white;">
+                                            <div class="card-subtitle" style="font-size: 16px; margin-bottom: 5px;">변동성 상품 시대에</div>
+                                            <div class="card-subtitle" style="font-size: 16px; margin-bottom: 15px;">대한 상품</div>
+                                            <h3 class="card-title" style="font-size: 28px; line-height: 1.4; margin-bottom: 30px;">청약 가능한<br>ELS는?</h3>
+                                            <button class="card-btn" style="background: white; color: #1a237e; border: none; padding: 10px 25px; border-radius: 25px; font-weight: bold;">바로가기</button>
                                         </div>
                                     </div>
 
                                     <!-- Grand OPEN 카드 -->
-                                    <div class="slide-card grand-open-card">
-                                        <div class="card-badge">Grand OPEN</div>
-                                        <h3 class="card-title">공모주, 여기서 한번에<br>신청하세요!</h3>
-                                        <p class="card-description">계좌개설, 계좌정보 조회부터 청약까지<br>한페이지에서 확인가능해요.</p>
-
+                                    <div class="slide-card grand-open-card" style="width: 300px; height: 380px; background: white; border-radius: 15px; padding: 30px; position: relative;">
+                                        <div class="card-badge" style="background: #ff4081; color: white; padding: 5px 15px; border-radius: 20px; display: inline-block; margin-bottom: 20px;">Grand OPEN</div>
+                                        <h3 class="card-title" style="font-size: 28px; line-height: 1.4; margin-bottom: 20px;">공모주, 여기서 한번에<br>신청하세요!</h3>
+                                        <p class="card-description" style="color: #666; font-size: 16px; line-height: 1.6;">계좌개설, 계좌정보 조회부터 청약까지<br>한페이지에서 확인가능해요.</p>
                                     </div>
 
                                     <!-- 우수 콜센터 카드 -->
-                                    <div class="slide-card award-card">
-                                        <div class="card-content">
-                                            <div class="card-subtitle">4년 연속</div>
-                                            <h3 class="card-title">한국의<br>우수 콜센터<br>선정</h3>
-                                            <button class="card-btn">바로가기</button>
-                                        </div>
-                                        <div class="award-image">
-                                            <img src="../imgs/배경1-2.png" alt="콜센터 이미지" class="award-img">
+                                    <div class="slide-card award-card" style="width: 300px; height: 380px; background: #f5f5f5; border-radius: 15px; overflow: hidden; position: relative;">
+                                        <div class="card-content" style="padding: 30px; position: relative; z-index: 2;">
+                                            <div class="card-subtitle" style="font-size: 16px; color: #666; margin-bottom: 10px;">4년 연속</div>
+                                            <h3 class="card-title" style="font-size: 28px; line-height: 1.4; margin-bottom: 30px;">한국의<br>우수 콜센터<br>선정</h3>
+                                            <button class="card-btn" style="background: #1a237e; color: white; border: none; padding: 10px 25px; border-radius: 25px; font-weight: bold;">바로가기</button>
                                         </div>
                                     </div>
                                 </div>
@@ -117,42 +111,12 @@
 
                         <!-- 추천상품 슬라이드 -->
                         <div class="slide">
-                            <div class="slide-background gray-bg"></div>
-                            <div class="slide-content">
-                                <div class="slide-grid">
-                                    <!-- 추천상품 컴포넌트들 -->
-                                     <!-- ELS 카드 -->
-                                    <div class="slide-card els-card">
-                                        <div class="card-content">
-                                            <div class="card-subtitle">변동성 상품 시대에</div>
-                                            <div class="card-subtitle">대한 상품</div>
-                                            <h3 class="card-title">청약 가능한<br>ELS는?</h3>
-                                            <button class="card-btn">바로가기</button>
-                                        </div>
-                                        <div class="els-background">
-                                            <img src="../imgs/배경1-1.jpg" alt="ELS 배경" class="els-bg-image">
-                                        </div>
-                                    </div>
-
-                                    <!-- Grand OPEN 카드 -->
-                                    <div class="slide-card grand-open-card">
-                                        <div class="card-badge">Grand OPEN</div>
-                                        <h3 class="card-title">공모주, 여기서 한번에<br>신청하세요!</h3>
-                                        <p class="card-description">계좌개설, 계좌정보 조회부터 청약까지<br>한페이지에서 확인가능해요.</p>
-
-                                    </div>
-
-                                    <!-- 우수 콜센터 카드 -->
-                                    <div class="slide-card award-card">
-                                        <div class="card-content">
-                                            <div class="card-subtitle">4년 연속</div>
-                                            <h3 class="card-title">한국의<br>우수 콜센터<br>선정</h3>
-                                            <button class="card-btn">바로가기</button>
-                                        </div>
-                                        <div class="award-image">
-                                            <img src="../imgs/배경1-2.png" alt="콜센터 이미지" class="award-img">
-                                        </div>
-                                    </div>
+                            <div class="slide-content" style="display: flex; justify-content: center; align-items: center; width: 940px; height: 400px; background: #ffffff; position: relative;">
+                                <div style="position: relative; width: 200px; height: 400px;">
+                                    <img src="../imgs/배경5.png" alt="추천상품 배경" style="width: 100%; height: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                                </div>
+                                <div style="position: absolute; left: 50%; transform: translateX(-50%); bottom: 20px;">
+                                    <p style="text-align: center; color: #333; font-size: 14px;">펀드, ELS/DLS, 랩 인기상품 보기</p>
                                 </div>
                             </div>
                         </div>
@@ -259,41 +223,61 @@
                         
                     </div>
                 </div>
-
-            <!-- Navigation Arrows -->
-            <button class="carousel-arrow prev" onclick="prevSlide()">‹</button>
-            <button class="carousel-arrow next" onclick="nextSlide()">›</button>
-
-                
-
-
-            <!-- Service Categories -->
-            <div class="service-categories">
-                <button class="category-btn active" data-slide="0">서비스</button>
-                <button class="category-btn" data-slide="1">추천상품</button>
-                <button class="category-btn" data-slide="2">투자정보</button>
-                <button class="category-btn" data-slide="3">핫클릭</button>
-            </div>
-
-
-        </div>
-    </section>
-    
-
-    <!-- News Section -->
-    <section class="news-section">
-        <div class="container">
-            <div class="news-header">
-                <h3>새소식(공지)</h3>
-                <button class="news-more">+</button>
-            </div>
-            <div class="news-list">
-                <div class="news-item">[공지] 신용/대출 기능 중단 안내 (2025/05/26)</div>
-                <div class="news-item">[공지] 신용/대출 기능 중단 안내 (2025/05/23)</div>
             </div>
         </div>
     </section>
-</div>
+
+    <!-- Service Categories -->
+    <div style="position: absolute; bottom: 180px; left: 0; right: 0; z-index: 2;">
+        <div style="display: flex; justify-content: center; gap: 40px;">
+            <button class="category-btn active" data-slide="0" style="color: #333333; padding: 3px 0px; font-size: 13px; font-family: nanumB, 돋움, Dotum, 굴림, Gulim; border: none; background: none; cursor: pointer;">서비스</button>
+            <button class="category-btn" data-slide="1" style="color: #333333; padding: 3px 0px; font-size: 13px; font-family: nanumB, 돋움, Dotum, 굴림, Gulim; border: none; background: none; cursor: pointer;">추천상품</button>
+            <button class="category-btn" data-slide="2" style="color: #333333; padding: 3px 0px; font-size: 13px; font-family: nanumB, 돋움, Dotum, 굴림, Gulim; border: none; background: none; cursor: pointer;">투자정보</button>
+            <button class="category-btn" data-slide="3" style="color: #333333; padding: 3px 0px; font-size: 13px; font-family: nanumB, 돋움, Dotum, 굴림, Gulim; border: none; background: none; cursor: pointer;">핫클릭</button>
+        </div>
+    </div>
+
+    <!-- Bottom Menu Section -->
+    <div class="tab-menu" style="width: 978.8px; height: 160px; background-color: #333333; padding: 0px 84px 0px 40px; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); z-index: 1;">
+        <div style="display: flex; justify-content: space-between; align-items: center; height: 100%;">
+            <div class="menu-group" style="display: flex; align-items: center;">
+                <h3 style="color: #FFFFFF; font-size: 14px; font-family: nanumB, 돋움, Dotum, 굴림, Gulim; margin-right: 40px;">차곡이신가요?</h3>
+                <div class="icon-group" style="display: flex; gap: 30px;">
+                    <div class="icon-item" style="text-align: center;">
+                        <img src="../imgs/icon-chart.png" alt="연금자산현황" style="width: 24px; height: 24px; margin-bottom: 5px;">
+                        <p style="color: #FFFFFF; font-size: 12px;">연금자산현황</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-group" style="display: flex; align-items: center;">
+                <h3 style="color: #FFFFFF; font-size: 14px; font-family: nanumB, 돋움, Dotum, 굴림, Gulim; margin-right: 40px;">편리하게 이용해보세요!</h3>
+                <div class="icon-group" style="display: flex; gap: 30px;">
+                    <div class="icon-item" style="text-align: center;">
+                        <img src="../imgs/icon-notice.png" alt="퇴직연금공고" style="width: 24px; height: 24px; margin-bottom: 5px;">
+                        <p style="color: #FFFFFF; font-size: 12px;">퇴직연금공고</p>
+                    </div>
+                    <div class="icon-item" style="text-align: center;">
+                        <img src="../imgs/icon-join.png" alt="입금하기" style="width: 24px; height: 24px; margin-bottom: 5px;">
+                        <p style="color: #FFFFFF; font-size: 12px;">입금하기</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-group" style="display: flex; align-items: center;">
+                <h3 style="color: #FFFFFF; font-size: 14px; font-family: nanumB, 돋움, Dotum, 굴림, Gulim; margin-right: 40px;">퇴직연금 고객이신가요?</h3>
+                <div class="icon-group" style="display: flex; gap: 30px;">
+                    <div class="icon-item" style="text-align: center;">
+                        <img src="../imgs/icon-doc.png" alt="가입내역" style="width: 24px; height: 24px; margin-bottom: 5px;">
+                        <p style="color: #FFFFFF; font-size: 12px;">가입내역</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="more-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%);">
+            <img src="../imgs/icon-more.png" alt="더보기" style="width: 20px; height: 20px;">
+        </button>
+    </div>
 
     <script>
         let currentSlide = 0;
